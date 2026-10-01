@@ -1,50 +1,257 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="DORTAS TECHNOLOGY — Advanced dental medical technology and precision instruments.">
-<title>DORTAS TECHNOLOGY | Advanced Dental Medical Technology</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="DORTAS TECHNOLOGY — Dental instruments, equipment and technology for modern dentistry.">
+<title>DORTAS TECHNOLOGY | Dental Excellence</title>
 <style>
-:root{--bg:#071015;--panel:#0d1a20;--line:rgba(255,255,255,.12);--text:#f3f6f4;--muted:#a8b7b5;--accent:#b9d8cf;--max:1180px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}.wrap{max-width:var(--max);margin:auto;padding:0 28px}
-nav{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(7,16,21,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:.18em;font-size:15px}.brand span{font-weight:400;color:var(--muted)}.links{display:flex;gap:30px;font-size:13px;color:#c7d1d0}.links a:hover{color:#fff}
-.hero{min-height:94vh;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 75% 25%,rgba(129,178,165,.20),transparent 28%),linear-gradient(135deg,#071015,#0a171d 55%,#10232a)}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,16,21,.95),rgba(7,16,21,.38),rgba(7,16,21,.08));pointer-events:none}.hero .wrap{position:relative;z-index:1;width:100%;padding-top:100px}.eyebrow{text-transform:uppercase;letter-spacing:.25em;font-size:11px;color:var(--accent);margin-bottom:22px}.hero h1{font-size:clamp(48px,7vw,92px);line-height:.98;letter-spacing:-.055em;max-width:820px;margin:0 0 26px}.hero p{max-width:610px;color:#b8c6c4;font-size:18px}.buttons{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}.btn{padding:13px 21px;border:1px solid rgba(255,255,255,.22);border-radius:2px;font-size:13px}.btn.primary{background:#e6efec;color:#071015;border-color:#e6efec}.btn:hover{transform:translateY(-1px)}
-section{padding:105px 0;border-bottom:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:46px}.kicker{color:var(--accent);font-size:11px;letter-spacing:.22em;text-transform:uppercase}.section-head h2{font-size:42px;line-height:1.05;letter-spacing:-.04em;margin:12px 0 0}.section-head p{max-width:460px;color:var(--muted);margin:0}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));border:1px solid var(--line);padding:26px;min-height:270px;position:relative;overflow:hidden}.card:before{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:-70px;top:-70px;border:1px solid rgba(185,216,207,.12)}.num{font-size:11px;color:var(--accent);letter-spacing:.18em}.card h3{font-size:22px;margin:55px 0 10px}.card p{color:var(--muted);font-size:14px}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}.about h2{font-size:48px;line-height:1.05;letter-spacing:-.04em;margin:12px 0 24px}.about p{color:var(--muted);max-width:560px}.spec{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}.spec div{background:var(--panel);padding:24px}.spec strong{display:block;font-size:28px}.spec small{color:var(--muted)}
-.product{display:grid;grid-template-columns:1.05fr .95fr;gap:28px}.product-visual{min-height:460px;background:radial-gradient(circle at 50% 45%,#3e5b61 0,#172b31 20%,#0b171c 60%);border:1px solid var(--line);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}.device{width:260px;height:260px;border-radius:50%;border:1px solid rgba(230,239,236,.45);box-shadow:0 0 70px rgba(185,216,207,.16),inset 0 0 40px rgba(255,255,255,.06);position:relative}.device:before,.device:after{content:"";position:absolute;border:1px solid rgba(230,239,236,.25);border-radius:50%;inset:35px}.device:after{inset:82px}.product-copy{padding:25px 10px}.product-copy h3{font-size:34px;margin:8px 0 18px}.product-copy p{color:var(--muted)}.feature{padding:17px 0;border-bottom:1px solid var(--line);font-size:14px}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:60px}.contact h2{font-size:54px;line-height:1;margin:10px 0 22px}.contact p{color:var(--muted)}form{display:grid;gap:13px}input,textarea{width:100%;padding:15px;background:#0b171c;border:1px solid var(--line);color:#fff;font:inherit}textarea{min-height:140px;resize:vertical}
-footer{padding:34px 0;color:#82928f;font-size:12px}.footer{display:flex;justify-content:space-between;gap:20px}
-@media(max-width:800px){.links{display:none}.grid,.about,.product,.contact{grid-template-columns:1fr}.hero h1{font-size:54px}.section-head{display:block}.section-head p{margin-top:20px}.about{gap:40px}.contact h2{font-size:44px}.footer{display:block}.footer div+div{margin-top:12px}}
+:root{
+  --blue:#005f86; --blue2:#00496a; --navy:#12323e; --ink:#1c343d;
+  --muted:#687980; --light:#f4f7f8; --line:#d9e2e5; --white:#fff;
+  --max:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:var(--max);margin:auto;padding:0 28px}
+.utility{height:34px;background:#f5f7f8;border-bottom:1px solid var(--line);font-size:12px;color:#60727a}
+.utility .wrap{height:100%;display:flex;justify-content:flex-end;align-items:center;gap:22px}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.nav{height:78px;display:flex;align-items:center;gap:38px}
+.logo{font-size:20px;font-weight:800;letter-spacing:.16em;white-space:nowrap}
+.logo span{color:var(--blue);font-weight:400}
+.menu{display:flex;gap:27px;flex:1;font-size:14px}
+.menu a:hover{color:var(--blue)}
+.contact-btn{border:1px solid var(--blue);padding:10px 17px;color:var(--blue);font-size:13px}
+.contact-btn:hover{background:var(--blue);color:white}
+.hero{background:#f0f5f6;min-height:600px;display:flex;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.kicker{font-size:12px;color:var(--blue);font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.hero h1{font-size:clamp(46px,5.5vw,72px);line-height:1.04;letter-spacing:-.045em;margin:17px 0 20px}
+.hero p{font-size:18px;color:#5d7078;max-width:620px}
+.actions{display:flex;gap:12px;margin-top:30px}
+.btn{display:inline-block;padding:13px 20px;border:1px solid var(--blue);font-size:13px}
+.btn.primary{background:var(--blue);color:#fff}
+.btn.primary:hover{background:var(--blue2)}
+.hero-image{height:455px;background:linear-gradient(135deg,#d8e7eb,#fff);position:relative;overflow:hidden}
+.hero-image:after{content:"DORTAS";position:absolute;right:30px;bottom:25px;font-size:11px;letter-spacing:.25em;color:#fff}
+.instrument{position:absolute;width:330px;height:58px;border-radius:35px;background:linear-gradient(180deg,#fff,#c6d2d6);left:50%;top:50%;transform:translate(-50%,-50%) rotate(-25deg);box-shadow:0 28px 45px #12323e25}
+.instrument:before{content:"";position:absolute;right:-48px;top:10px;width:75px;height:38px;border-radius:0 22px 22px 0;background:#edf3f4}
+.instrument:after{content:"D";position:absolute;left:34px;top:13px;color:var(--blue);font-weight:800;font-size:17px}
+.circle{position:absolute;border:1px solid #005f8640;border-radius:50%;width:310px;height:310px;left:50%;top:50%;transform:translate(-50%,-50%)}
+.circle:before{content:"";position:absolute;inset:45px;border:1px solid #005f8630;border-radius:50%}
+.circle:after{content:"";position:absolute;inset:95px;border:1px solid #005f8628;border-radius:50%}
+section{padding:82px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:36px}
+.section-head h2{font-size:39px;line-height:1.1;letter-spacing:-.03em;margin:9px 0}
+.section-head p{max-width:530px;color:var(--muted);margin:0}
+.category-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line)}
+.category{min-height:220px;padding:25px;border-right:1px solid var(--line);transition:.2s}
+.category:last-child{border-right:0}
+.category:hover{background:var(--light)}
+.category .num{font-size:12px;color:var(--blue);font-weight:700}
+.category h3{font-size:20px;margin:45px 0 9px}
+.category p{font-size:13px;color:var(--muted);margin:0}
+.product-section{background:var(--light)}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.product{background:#fff;border:1px solid var(--line)}
+.product-visual{height:285px;background:linear-gradient(140deg,#edf4f5,#fff);position:relative;display:grid;place-items:center;overflow:hidden}
+.product-visual .instrument{width:230px;height:44px}
+.product-body{padding:23px}
+.product-label{font-size:11px;color:var(--blue);font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+.product h3{font-size:22px;margin:10px 0}
+.product p{font-size:14px;color:var(--muted)}
+.product-link{display:inline-block;color:var(--blue);font-size:13px;font-weight:700;margin-top:12px}
+.stats{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:34px 24px;border-right:1px solid var(--line)}
+.stat:last-child{border:0}
+.stat strong{display:block;font-size:36px;color:var(--blue);letter-spacing:-.04em}
+.stat span{font-size:13px;color:var(--muted)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.visual{min-height:410px;background:linear-gradient(135deg,#dcebef,#f8fbfb);position:relative;overflow:hidden}
+.copy h2{font-size:43px;line-height:1.08;margin:10px 0 18px}
+.copy p{color:var(--muted)}
+.list{margin-top:25px}
+.list div{padding:13px 0;border-bottom:1px solid var(--line);font-size:14px}
+.list b{color:var(--blue);margin-right:10px}
+.blue-section{background:var(--blue);color:#fff}
+.blue-section .section-head p{color:#d4e4e9}
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#ffffff38}
+.service{background:var(--blue);padding:28px;min-height:205px}
+.service .num{font-size:12px;opacity:.8}
+.service h3{margin:42px 0 8px;font-size:19px}
+.service p{font-size:13px;color:#d5e5e9}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.contact h2{font-size:45px;line-height:1.06;margin:10px 0 20px}
+.contact p{color:var(--muted)}
+.contact strong{color:var(--ink)}
+form{display:grid;gap:12px}
+input,textarea,select{width:100%;padding:14px;border:1px solid var(--line);font:inherit;background:#fff}
+textarea{min-height:140px}
+footer{border-top:1px solid var(--line);padding:30px 0;color:#718087;font-size:12px}
+.footer{display:flex;justify-content:space-between;gap:20px}
+.social{color:var(--blue);font-weight:700}
+@media(max-width:900px){
+ .menu{display:none}.hero-grid,.split,.contact{grid-template-columns:1fr}
+ .category-grid{grid-template-columns:1fr 1fr}.category{border-bottom:1px solid var(--line)}
+ .product-grid,.service-grid{grid-template-columns:1fr 1fr}
+ .stat-grid{grid-template-columns:1fr 1fr}.stat{border-bottom:1px solid var(--line)}
+ .section-head{display:block}.section-head p{margin-top:14px}
+}
+@media(max-width:560px){
+ .utility{display:none}.nav{height:68px}.category-grid,.product-grid,.service-grid,.stat-grid{grid-template-columns:1fr}
+ .category{border-right:0}.stat{border-right:0}.hero{padding:55px 0}.hero h1{font-size:46px}
+ .hero-image{height:310px}.copy h2,.contact h2{font-size:36px}.footer{display:block}.footer div+div{margin-top:10px}
+}
 </style>
 </head>
 <body>
-<nav><div class="wrap nav"><a class="brand" href="#">DORTAS <span>TECHNOLOGY</span></a><div class="links"><a href="#about">About</a><a href="#products">Products</a><a href="#technology">Technology</a><a href="#quality">Quality</a><a href="#contact">Contact</a></div></div></nav>
 
-<header class="hero">
+<div class="utility"><div class="wrap"><span>Professional Dental Technology</span><span>Distributor & OEM / ODM Support</span><span>EN</span></div></div>
+
+<header>
+<div class="wrap nav">
+<a class="logo" href="#">DORTAS <span>TECHNOLOGY</span></a>
+<nav class="menu">
+<a href="#products">Products</a>
+<a href="#solutions">Solutions</a>
+<a href="#technology">Technology</a>
+<a href="#service">Service</a>
+<a href="#company">Company</a>
+</nav>
+<a class="contact-btn" href="#contact">Contact</a>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<div class="wrap hero-grid">
+<div>
+<div class="kicker">Dental instruments · Equipment · Technology</div>
+<h1>Precision for modern dentistry.</h1>
+<p>DORTAS TECHNOLOGY develops professional dental instruments and equipment with a focus on precision, ergonomics, reliability and efficient clinical workflows.</p>
+<div class="actions">
+<a class="btn primary" href="#products">Explore products</a>
+<a class="btn" href="#contact">Request information</a>
+</div>
+</div>
+<div class="hero-image"><div class="circle"></div><div class="instrument"></div></div>
+</div>
+</section>
+
+<section id="solutions">
 <div class="wrap">
-<div class="eyebrow">Advanced Dental Medical Technology</div>
-<h1>Precision engineered for modern dentistry.</h1>
-<p>DORTAS TECHNOLOGY develops refined dental medical equipment and precision instruments designed around clinical efficiency, reliability and the future of dental care.</p>
-<div class="buttons"><a class="btn primary" href="#products">Explore Products</a><a class="btn" href="#contact">Request Information</a></div>
-</div></header>
+<div class="section-head">
+<div><div class="kicker">Our portfolio</div><h2>Solutions for every practice.</h2></div>
+<p>Discover a focused portfolio designed for dental professionals, clinics, distributors and OEM / ODM partners.</p>
+</div>
+<div class="category-grid">
+<a class="category" href="#products"><div class="num">01 / INSTRUMENTS</div><h3>Dental Instruments</h3><p>Handpieces, turbines, contra-angles and precision instruments for daily clinical work.</p></a>
+<a class="category" href="#products"><div class="num">02 / SURGERY</div><h3>Surgical Systems</h3><p>Professional solutions supporting implantology and surgical applications.</p></a>
+<a class="category" href="#products"><div class="num">03 / PRACTICE</div><h3>Practice Equipment</h3><p>Equipment concepts focused on ergonomics, workflow and patient comfort.</p></a>
+<a class="category" href="#products"><div class="num">04 / DIGITAL</div><h3>Digital Dentistry</h3><p>Technology-ready solutions for the connected dental practice of tomorrow.</p></a>
+</div>
+</div>
+</section>
 
-<section id="about"><div class="wrap about"><div><div class="kicker">01 / About DORTAS</div><h2>Engineering confidence into every procedure.</h2><p>We focus on the details that matter in professional dentistry: precision, ergonomics, dependable performance and a clean, contemporary experience for clinicians and patients.</p><p>DORTAS TECHNOLOGY is positioned as a global-facing dental technology brand, built for professional practices, distributors and OEM/ODM partners.</p></div><div class="spec"><div><strong>01</strong><small>Precision-first design</small></div><div><strong>02</strong><small>Clinical usability</small></div><div><strong>03</strong><small>Professional systems</small></div><div><strong>04</strong><small>Global partnership</small></div></div></div></section>
+<section id="products" class="product-section">
+<div class="wrap">
+<div class="section-head">
+<div><div class="kicker">Featured products</div><h2>Designed around the dentist.</h2></div>
+<p>These are presentation concepts. Replace them with your actual DORTAS models, specifications, certifications and product photography.</p>
+</div>
+<div class="product-grid">
+<article class="product"><div class="product-visual"><div class="instrument"></div></div><div class="product-body"><div class="product-label">High-Speed</div><h3>DORTAS Precision Turbine</h3><p>Professional handpiece concept emphasizing balance, handling and dependable everyday performance.</p><a class="product-link" href="#contact">View product →</a></div></article>
+<article class="product"><div class="product-visual"><div class="instrument" style="transform:rotate(12deg)"></div></div><div class="product-body"><div class="product-label">Electric</div><h3>DORTAS Electric Series</h3><p>Ergonomic rotary platform concept for controlled, efficient restorative and general procedures.</p><a class="product-link" href="#contact">View product →</a></div></article>
+<article class="product"><div class="product-visual"><div class="instrument" style="transform:rotate(-7deg);width:180px"></div></div><div class="product-body"><div class="product-label">Surgical</div><h3>DORTAS Surgical System</h3><p>Precision-oriented solution concept for implant and surgical workflows.</p><a class="product-link" href="#contact">View product →</a></div></article>
+</div>
+</div>
+</section>
 
-<section id="products"><div class="wrap"><div class="section-head"><div><div class="kicker">02 / Product Systems</div><h2>Designed around the clinical workflow.</h2></div><p>A premium product architecture for dental practices, distributors and professional medical environments.</p></div><div class="grid">
-<div class="card"><div class="num">D-01</div><h3>Dental Handpieces</h3><p>Precision-focused handpiece concepts emphasizing balance, control and dependable clinical performance.</p></div>
-<div class="card"><div class="num">D-02</div><h3>Endodontic Systems</h3><p>Modern instrumentation concepts supporting efficient and repeatable endodontic workflows.</p></div>
-<div class="card"><div class="num">D-03</div><h3>Surgical Instruments</h3><p>Professional instrument solutions with attention to ergonomics, materials and precision handling.</p></div>
-</div></div></section>
+<section class="stats">
+<div class="wrap stat-grid">
+<div class="stat"><strong>01</strong><span>Precision-oriented product development</span></div>
+<div class="stat"><strong>02</strong><span>Professional dental application focus</span></div>
+<div class="stat"><strong>03</strong><span>OEM / ODM collaboration capability</span></div>
+<div class="stat"><strong>04</strong><span>Global distributor support</span></div>
+</div>
+</section>
 
-<section id="technology"><div class="wrap"><div class="product"><div class="product-visual"><div class="device"></div></div><div class="product-copy"><div class="kicker">03 / Technology</div><h3>Minimal form.<br>Maximum intention.</h3><p>Our design language combines technical clarity with a refined medical aesthetic. Every surface, proportion and interaction is considered to support professional use.</p><div class="feature">Precision-oriented engineering</div><div class="feature">Ergonomic product architecture</div><div class="feature">Material and finish consistency</div><div class="feature">OEM / ODM development support</div></div></div></div></section>
+<section id="technology">
+<div class="wrap split">
+<div class="visual"><div class="circle"></div><div class="instrument"></div></div>
+<div class="copy">
+<div class="kicker">Technology & quality</div>
+<h2>Details make the difference.</h2>
+<p>DORTAS TECHNOLOGY is built around a simple principle: dental technology should feel precise, intuitive and dependable in everyday use.</p>
+<div class="list">
+<div><b>01</b> Ergonomic design for professional workflows</div>
+<div><b>02</b> Precision engineering and material selection</div>
+<div><b>03</b> Product quality and process discipline</div>
+<div><b>04</b> Development with long-term partners</div>
+</div>
+</div>
+</div>
+</section>
 
-<section id="quality"><div class="wrap"><div class="section-head"><div><div class="kicker">04 / Quality</div><h2>Built for professional standards.</h2></div><p>Quality is treated as a system—from product concept and material selection to manufacturing, inspection and partner support.</p></div><div class="grid"><div class="card"><div class="num">Q-01</div><h3>Quality Control</h3><p>Structured inspection and process discipline across product development and manufacturing.</p></div><div class="card"><div class="num">Q-02</div><h3>Documentation</h3><p>Clear technical documentation and product information for professional partners.</p></div><div class="card"><div class="num">Q-03</div><h3>Partnership</h3><p>Flexible collaboration for distributors, dental groups and OEM/ODM opportunities.</p></div></div></div></section>
+<section id="service" class="blue-section">
+<div class="wrap">
+<div class="section-head">
+<div><div class="kicker" style="color:#cce6ee">Partner services</div><h2>Support beyond the product.</h2></div>
+<p>From product selection to OEM / ODM collaboration, DORTAS TECHNOLOGY supports professional partners throughout the journey.</p>
+</div>
+<div class="service-grid">
+<div class="service"><div class="num">01</div><h3>Product Support</h3><p>Technical information, specifications, manuals and product guidance.</p></div>
+<div class="service"><div class="num">02</div><h3>Distributor Support</h3><p>Professional support for international dental distributors and market partners.</p></div>
+<div class="service"><div class="num">03</div><h3>OEM / ODM</h3><p>Product development, customization and private-label collaboration.</p></div>
+<div class="service"><div class="num">04</div><h3>After-Sales</h3><p>Responsive communication and product support for long-term cooperation.</p></div>
+</div>
+</div>
+</section>
 
-<section id="contact"><div class="wrap contact"><div><div class="kicker">05 / Contact</div><h2>Let's build better dental technology.</h2><p>Tell us what you are looking for and our team can follow up with product information, distribution opportunities or OEM/ODM discussion.</p><p><strong>Email</strong><br>sales@dortastechnology.com</p></div><form onsubmit="event.preventDefault(); alert('Thank you. Please connect this form to your email service before publishing.');"><input placeholder="Name" required><input type="email" placeholder="Email" required><input placeholder="Company"><textarea placeholder="How can we help?"></textarea><button class="btn primary" type="submit">Send Inquiry</button></form></div></section>
+<section id="company">
+<div class="wrap split">
+<div class="copy">
+<div class="kicker">About DORTAS TECHNOLOGY</div>
+<h2>A dental technology partner built for the long term.</h2>
+<p>DORTAS TECHNOLOGY serves dental professionals, clinics, distributors and international partners with a growing portfolio of dental instruments and equipment.</p>
+<p>Our brand direction combines clean industrial design, practical usability and professional product communication.</p>
+<a class="btn" href="#contact">Talk to DORTAS</a>
+</div>
+<div class="visual" style="min-height:360px"><div class="circle"></div></div>
+</div>
+</section>
 
-<footer><div class="wrap footer"><div>© 2026 DORTAS TECHNOLOGY. All rights reserved.</div><div>Advanced Dental Medical Technology</div></div></footer>
-</body></html>
+<section id="contact">
+<div class="wrap contact">
+<div>
+<div class="kicker">Contact DORTAS</div>
+<h2>Let's build better dental technology together.</h2>
+<p>For product inquiries, distributor cooperation, OEM / ODM projects or general business inquiries, contact our team.</p>
+<p><strong>Email</strong><br><a href="mailto:dortas_technology@163.com">dortas_technology@163.com</a></p>
+<p><strong>WhatsApp</strong><br><a href="https://wa.me/8613078489305">+86 130 7848 9305</a></p>
+<p><strong>Instagram</strong><br><span class="social">@dortas_official</span></p>
+</div>
+<form onsubmit="event.preventDefault();alert('This is a demo form. Connect it to your business email/form service before launch.');">
+<input required placeholder="Name">
+<input required type="email" placeholder="Email">
+<input placeholder="Company">
+<select><option>Product inquiry</option><option>Distributor partnership</option><option>OEM / ODM</option><option>After-sales support</option><option>Other</option></select>
+<textarea placeholder="How can we help?"></textarea>
+<button class="btn primary" type="submit">Send inquiry</button>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap footer">
+<div>© 2026 DORTAS TECHNOLOGY. All rights reserved.</div>
+<div>WhatsApp +86 130 7848 9305 · @dortas_official · dortas_technology@163.com</div>
+</div>
+</footer>
+</body>
+</html>
